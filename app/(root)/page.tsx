@@ -1,9 +1,11 @@
 import ProductList from '@/components/shared/product/product-list';
-import sampleData from '@/db/sample-data';
+import { getLatestProducts } from '@/lib/actions/product.actions';
 
-const HomePage = () => {
-  console.log(sampleData);
-  return <ProductList data={sampleData.products} title='Newest arrivals' />;
+const HomePage = async () => {
+  const latestProducts = getLatestProducts();
+  console.log(latestProducts);
+
+  return <ProductList data={latestProducts} title='Newest arrivals' />;
 };
 
 export default HomePage;

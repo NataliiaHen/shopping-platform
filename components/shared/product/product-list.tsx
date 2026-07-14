@@ -9,7 +9,7 @@ const ProductList = ({
   title?: string;
   limit?: number;
 }) => {
-  const limitedData = data.slice(0, limit);
+  const limitedData = data?.slice(0, limit);
 
   return (
     <div className='my-10'>
