@@ -14,7 +14,7 @@ const ProductImages = ({ images }: { images: string[] }) => {
         alt='hero image'
         width={1000}
         height={1000}
-        className='min-h-[300px] object-cover object-center '
+        className='min-h-75 object-cover object-center '
       />
       <div className='flex'>
         {images.map((image, index) => (

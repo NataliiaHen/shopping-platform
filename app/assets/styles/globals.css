@@ -1,20 +1,14 @@
-/* 1. Головні імпорти */
 @import "tailwindcss";
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
 
-/* 2. Налаштування теми для v4 (Новий правильний синтаксис) */
 @theme {
-  /* Замість перезапису всього брейкпоінту, додаємо префікс --breakpoint-*, */
-  /* але в v4 вони вже є за замовчуванням. Якщо вам потрібні стандартні, */
-  /* цей блок можна взагалі не писати, Tailwind v4 знає їх із коробки. */
   --breakpoint-sm: 640px;
   --breakpoint-md: 768px;
   --breakpoint-lg: 1024px;
   --breakpoint-xl: 1280px;
   --breakpoint-2xl: 1536px;
   
-  /* Зв'язуємо змінні теми Shadcn */
   --font-heading: var(--font-sans);
   --font-sans: var(--font-sans);
 
@@ -58,10 +52,8 @@
   --radius-xl: calc(var(--radius) + 4px);
 }
 
-/* 3. Варіант темної теми */
 @custom-variant dark (&:is(.dark *));
 
-/* 4. Системні CSS змінні для Shadcn */
 :root {
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
@@ -133,10 +125,9 @@
   --sidebar-ring: oklch(0.556 0 0);
 }
 
-/* 5. Кастомні класи компонентів (Через традиційний CSS синтаксис, що найбільш стабільний для v4) */
 @layer utilities {
   .wrapper {
-    max-width: 80rem; /* Нативний еквівалент max-w-7xl */
+    max-width: 80rem;
     margin-left: auto;
     margin-right: auto;
     padding: 1.25rem;
@@ -202,7 +193,6 @@
   }
 }
 
-/* 6. Глобальні стилі елементів */
 * {
   border-color: var(--border);
 }
