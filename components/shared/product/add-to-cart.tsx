@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Plus, Minus, Loader } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 
-import { Cart, CartItem } from '@/app/types';
+import { Cart, CartItem } from '@/types';
 import { addItemToCart, removeItemFromCart } from '@/lib/actions/cart.actions';
 import { useTransition } from 'react';
 import { useToast } from '@/hooks/use-toast';

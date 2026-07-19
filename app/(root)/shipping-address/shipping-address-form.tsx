@@ -8,7 +8,6 @@ import { ControllerRenderProps, useForm, SubmitHandler } from 'react-hook-form';
 import { shippingAddressDefaultValues } from '@/lib/constants';
 import { useToast } from '@/hooks/use-toast';
 import { useTransition } from 'react';
-import CheckoutSteps from '@/components/shared/checkout-steps';
 import {
   Form,
   FormControl,
@@ -52,7 +51,7 @@ const ShippingAddressForm = ({
         return;
       }
 
-      router.push('/payment-metod');
+      router.push('/payment-method');
     });
   };
 

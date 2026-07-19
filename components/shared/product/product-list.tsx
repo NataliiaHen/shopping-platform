@@ -1,5 +1,5 @@
 import ProductCard from './product-card';
-import { Product } from '@/app/types';
+import { Product } from '@/types';
 
 const ProductList = ({
   data,

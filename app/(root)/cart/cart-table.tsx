@@ -7,7 +7,7 @@ import { addItemToCart, removeItemFromCart } from '@/lib/actions/cart.actions';
 import { ArrowRight, Loader, Minus, Plus } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Cart } from '@/app/types';
+import { Cart } from '@/types';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import {
