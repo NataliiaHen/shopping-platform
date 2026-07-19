@@ -1,6 +1,6 @@
-@import "tailwindcss";
-@import "tw-animate-css";
-@import "shadcn/tailwind.css";
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@import 'shadcn/tailwind.css';
 
 @theme {
   --breakpoint-sm: 640px;
@@ -8,7 +8,7 @@
   --breakpoint-lg: 1024px;
   --breakpoint-xl: 1280px;
   --breakpoint-2xl: 1536px;
-  
+
   --font-heading: var(--font-sans);
   --font-sans: var(--font-sans);
 
@@ -202,4 +202,12 @@
 body {
   background-color: var(--background);
   color: var(--foreground);
+}
+
+html.dark .upload-field .text-white {
+  color: #ffffff !important;
+}
+
+.upload-field .text-white {
+  color: #000 !important;
 }
