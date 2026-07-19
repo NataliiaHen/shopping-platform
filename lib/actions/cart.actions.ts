@@ -7,7 +7,7 @@ import { auth } from '@/auth';
 import { prisma } from '@/db/prisma';
 import { cartItemSchema, insertCartSchema } from '../validators';
 import { revalidatePath } from 'next/cache';
-import { Prisma } from '../generated/prisma/client';
+import { Prisma } from '@prisma/client';
 
 const calcPrice = (items: CartItem[]) => {
   const itemsPrice = round2(

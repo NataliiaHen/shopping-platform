@@ -1,6 +1,6 @@
 import { getOrderById } from '@/lib/actions/order.actions';
 import { notFound } from 'next/navigation';
-import { ShippingAddress } from '@/types';
+import { Order, ShippingAddress } from '@/types';
 import { Metadata } from 'next';
 import OrderDetailsTable from './order-details-table';
 
@@ -22,10 +22,12 @@ const OrderDetailsPage = async (props: {
 
   return (
     <OrderDetailsTable
-      order={{
-        ...order,
-        shippingAddress: order.shippingAddress as ShippingAddress,
-      }}
+      order={
+        {
+          ...order,
+          shippingAddress: order.shippingAddress as ShippingAddress,
+        } as unknown as Order
+      }
     />
   );
 };
